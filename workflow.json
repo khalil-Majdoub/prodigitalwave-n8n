@@ -1,0 +1,243 @@
+{
+  "name": "ProDigitalWave Webhook to Google Sheets",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "cac3d136-6157-4262-abb7-533ef67bf05b",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -48,
+        0
+      ],
+      "id": "a699be75-2762-4830-adc0-07c7f2b02cfa",
+      "name": "Webhook",
+      "webhookId": "cac3d136-6157-4262-abb7-533ef67bf05b"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1fGLGqg16zyZksalwrVBcVHragojuMrG-zQV-IJ4WQNo",
+          "mode": "list",
+          "cachedResultName": "ProDigitalWave Clients",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fGLGqg16zyZksalwrVBcVHragojuMrG-zQV-IJ4WQNo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fGLGqg16zyZksalwrVBcVHragojuMrG-zQV-IJ4WQNo/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Project Name": "={{ $json.body.projectName }}",
+            "Number of Pages": "={{ $json.body.pages }}",
+            "Plan": "={{ $json.body.plan }}",
+            "Price": "={{ $json.body.price }}",
+            "E-commerce": "={{ $json.body.ecommerce }}",
+            "Design Style": "={{ $json.body.designStyle }}",
+            "Brand Colors": "={{ $json.body.colors }}",
+            "Extra Features": "={{ $json.body.features }}",
+            "Paid?": "={{ $json.body.paid }}",
+            "Work Delivered?": "={{ $json.body.delivered }}",
+            "Affiliate Ref": "={{ $json.body.affiliate }}",
+            "Notes/Status": "={{ $json.body.status }}",
+            "name": "={{ $json.body.name }}",
+            "email": "={{ $json.body.email }}",
+            "Anything Else": "={{ $json.body.notes }}",
+            "Date Submitted": "={{ $now }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Date Submitted",
+              "displayName": "Date Submitted",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Project Name",
+              "displayName": "Project Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Number of Pages",
+              "displayName": "Number of Pages",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Plan",
+              "displayName": "Plan",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Price",
+              "displayName": "Price",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "E-commerce",
+              "displayName": "E-commerce",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Design Style",
+              "displayName": "Design Style",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Brand Colors",
+              "displayName": "Brand Colors",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Extra Features",
+              "displayName": "Extra Features",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Anything Else",
+              "displayName": "Anything Else",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Paid?",
+              "displayName": "Paid?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Work Delivered?",
+              "displayName": "Work Delivered?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Affiliate Ref",
+              "displayName": "Affiliate Ref",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Notes/Status",
+              "displayName": "Notes/Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        0
+      ],
+      "id": "ec228b35-4cd6-464c-be6d-f863b58fb450",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YGGhL853lpcyQ6jI",
+          "name": "Google Sheets account 2"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "b982bee7d4308613174dd6696c9d833cd71a0eb9f6cf13e09d8509fda054ff9b"
+  }
+}
